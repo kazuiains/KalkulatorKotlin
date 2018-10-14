@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/utama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary2"
+        tools:context="com.zerosoft.kalkulatorkotlin.kalkulator"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/nilai"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/k5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/inputan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="start"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/hasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical|end"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/k1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnsmdg"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                style="@style/ActionButtonStyle"
+                android:id="@+id/btntitik"
+                android:text="@string/titik" />
+
+            <Button
+                style="@style/ActionButtonStyle"
+                android:id="@+id/btn0"
+                android:text="@string/no0" />
+
+            <ImageView
+                style="@style/ActionButtonStyle"
+                android:scaleType="center"
+                android:id="@+id/btnhapus"
+                android:contentDescription="@string/backspace"
+                app:srcCompat="@drawable/backspace"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/k2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/k1"
+        app:layout_constraintEnd_toStartOf="@+id/btnsmdg"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/ActionButtonStyle"
+            android:id="@+id/btn1"
+            android:text="@string/no1" />
+
+        <Button
+            style="@style/ActionButtonStyle"
+            android:id="@+id/btn2"
+            android:text="@string/no2" />
+
+        <Button
+            style="@style/ActionButtonStyle"
+            android:id="@+id/btn3"
+            android:text="@string/no3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/k3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/k2"
+        app:layout_constraintEnd_toStartOf="@+id/btnkurang"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no5" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/k4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/k3"
+        app:layout_constraintEnd_toStartOf="@+id/btntambah"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/ActionButtonStyle"
+            android:text="@string/no9" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/k5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/k4"
+        app:layout_constraintEnd_toStartOf="@+id/btnhpssemua"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/btnmore"
+            style="@style/ActionButtonStyle"
+            android:contentDescription="@string/more"
+            android:scaleType="center"
+            app:srcCompat="@drawable/more" />
+
+        <Button
+            android:id="@+id/btnbagi"
+            style="@style/ActionButtonStyle"
+            android:text="@string/bagi" />
+
+        <Button
+            android:id="@+id/btnkali"
+            style="@style/ActionButtonStyle"
+            android:text="@string/kali" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btntambah"
+        style="@style/FungsiButtonStyle"
+        android:text="@string/tambah"
+        app:layout_constraintBottom_toTopOf="@+id/btnkurang"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnkurang"
+        style="@style/FungsiButtonStyle"
+        android:text="@string/kurang"
+        app:layout_constraintBottom_toBottomOf="@+id/k3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnhpssemua"
+        style="@style/ClearButtonStyle"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toTopOf="@+id/btntambah"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        style="@style/SamadenganButtonStyle"
+        android:id="@+id/btnsmdg"
+        android:text="@string/samadengan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnkurang"
+        />
+
+</android.support.constraint.ConstraintLayout>
+
+
+
